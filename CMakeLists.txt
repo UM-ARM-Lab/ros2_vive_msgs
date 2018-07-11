@@ -27,3 +27,7 @@ rosidl_generate_interfaces(vive_msgs
 )
 
 ament_package()
+
+install(
+  FILES mapping_rules.yaml
+  DESTINATION share/${PROJECT_NAME})
