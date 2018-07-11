@@ -1,2 +1,2 @@
-Controller[] controllers
+Controller[2] controllers
 HeadMountedDisplay hmd
