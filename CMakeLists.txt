@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(ros2_vive_msgs)
+project(vive_msgs)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -19,7 +19,7 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
-rosidl_generate_interfaces(ros2_vive_msgs
+rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/HeadMountedDisplay.msg"
   "msg/Controller.msg"
   "msg/ViveSystem.msg"
@@ -27,7 +27,3 @@ rosidl_generate_interfaces(ros2_vive_msgs
 )
 
 ament_package()
-
-install(
-  FILES mapping_rules.yaml
-  DESTINATION share/${PROJECT_NAME})
